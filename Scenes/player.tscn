@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cruibhcl2evi7"]
 
+[ext_resource type="Script" uid="uid://dxhxeg6pv0iif" path="res://Scenes/player.gd" id="1_3smsa"]
 [ext_resource type="Texture2D" uid="uid://u20rsp54d7y" path="res://Sprites/Personajes/Fire Wizard/Attack_1.png" id="1_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://b3pm0cy7gpffh" path="res://Sprites/Personajes/Fire Wizard/Idle.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://ca7pald10ynru" path="res://Sprites/Personajes/Fire Wizard/Run.png" id="3_fkybt"]
@@ -265,6 +266,7 @@ size = Vector2(15, 46)
 radius = 25.019993
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=289482892]
+script = ExtResource("1_3smsa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=781250913]
 position = Vector2(10, -65)
