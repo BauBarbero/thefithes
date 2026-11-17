@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://fblog0u1u6r3"]
+
+[ext_resource type="Texture2D" uid="uid://dyie45a8w2205" path="res://icon.svg" id="1_dpw2a"]
+[ext_resource type="Texture2D" uid="uid://bqg52hxul3yah" path="res://5.png" id="1_l3thc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0ya7"]
+size = Vector2(286, 264)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yex4w"]
+size = Vector2(579.9398, 49.205597)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dtglo"]
+size = Vector2(28, 727)
+
+[node name="Node2D" type="Node2D" unique_id=1130397087]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=53919867]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1469380787]
+scale = Vector2(2.359375, 2.203125)
+texture = ExtResource("1_dpw2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=408706889]
+shape = SubResource("RectangleShape2D_u0ya7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1931010485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1561814147]
+position = Vector2(-2.9999738, 361)
+scale = Vector2(2.5381944, 2.6419754)
+shape = SubResource("RectangleShape2D_yex4w")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=731506858]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1527360350]
+position = Vector2(-724, -60.5)
+shape = SubResource("RectangleShape2D_dtglo")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1300861809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1872198868]
+position = Vector2(717, -46)
+shape = SubResource("RectangleShape2D_dtglo")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=2118301061]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1357793518]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=630578255]
+scale = Vector2(2.5416667, 2.617284)
+texture = ExtResource("1_l3thc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1874132882]
