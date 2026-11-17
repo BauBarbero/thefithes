@@ -1,5 +1,5 @@
-extends Node
-
+extends Area2D
+class_name HitComponent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
