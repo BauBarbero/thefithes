@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="thefithes"
-run/main_scene="res://Scenes/training.tscn"
+run/main_scene="uid://cl8a8ll7ucqka"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

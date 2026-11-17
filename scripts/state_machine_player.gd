@@ -8,7 +8,7 @@ enum stateMachine {
 	HIT,
 }
 
-const SPEED = 300.0
+const SPEED = 250.0
 const JUMP_VELOCITY = -400.0
 var con = true
 var state = stateMachine.IDLE
@@ -72,6 +72,7 @@ func _physics_process(delta: float) -> void:
 			if player.velocity.y > 0:
 				state = stateMachine.FALL
 		stateMachine.FALL:
+			animation.play("fall")
 			if direction:
 				player.velocity.x = direction * SPEED
 				if direction == -1:

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cl8a8ll7ucqka"]
+
+[ext_resource type="Texture2D" uid="uid://cj6ccvtm8y1v7" path="res://Sprites/BackgroundBosques/Bosque/5.png" id="1_g1va3"]
+[ext_resource type="PackedScene" uid="uid://cruibhcl2evi7" path="res://Scenes/player.tscn" id="2_mxb6n"]
+[ext_resource type="PackedScene" uid="uid://cee8382l21qmq" path="res://Scenes/dead_zone.tscn" id="3_7d8ud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0rnr"]
+size = Vector2(1148, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d8ud"]
+size = Vector2(23, 325)
+
+[node name="bosque" type="Node2D" unique_id=296592041]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1020884366]
+position = Vector2(576, 0)
+texture = ExtResource("1_g1va3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1509556328]
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D" unique_id=233599519]
+position = Vector2(-571, 1)
+texture = ExtResource("1_g1va3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1404398147]
+texture = ExtResource("1_g1va3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=680113857]
+position = Vector2(-286, 126)
+shape = SubResource("RectangleShape2D_e0rnr")
+
+[node name="CharacterBody2D" parent="." unique_id=289482892 instance=ExtResource("2_mxb6n")]
+position = Vector2(-301, 108)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1613065929]
+position = Vector2(4, -59)
+zoom = Vector2(3.52, 3.52)
+
+[node name="DeadZone" parent="." unique_id=467521445 instance=ExtResource("3_7d8ud")]
+position = Vector2(-4095, 257)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1636564871]
+position = Vector2(-44, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=533220694]
+position = Vector2(-569, -68)
+shape = SubResource("RectangleShape2D_7d8ud")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1234174739]
+position = Vector2(522, 63)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=177561602]
+position = Vector2(-243.5, -61.5)
+shape = SubResource("RectangleShape2D_7d8ud")
